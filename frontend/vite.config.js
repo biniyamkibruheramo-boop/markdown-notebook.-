@@ -8,14 +8,26 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Markdown Notes',
-        short_name: 'Markdown Notes',
-        description: 'A simple Markdown notes app',
+        name: 'Markdown Notebook',
+        short_name: 'Notebook',
+        description: 'AI-powered Markdown notes with sync',
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
-      }
+        icons: [
+          {
+            src: '/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      },
     })
   ],
   server: {
